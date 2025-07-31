@@ -1,4 +1,4 @@
-## _Pseudocódigo_
+# _Pseudocódigo_
 
 # Símbolos Comunes de Diagramas de Flujo
 
@@ -45,3 +45,20 @@ Fuente: [Lucidchart - Simbología de diagramas de flujo](https://www.lucidchart.
 
 ![alt text](<flujo_1.png>) ![alt text](<flujo_2.png>)
 
+# _Ejercicio_
+
+Analicemos el siguiente problema y representemos su solución mediante un algoritmo secuencial.
+
+- Construye un algoritmo que, al recibir como datos **el ID** del empleado y los seis primeros sueldos del año, calcule el ingreso total semestral y el promedio mensual, e imprima el ID del empleado, el ingreso total y el promedio mensual.
+
+## Solución:
+
+```
+Inicio 
+leer ID, S1, S2, S3, S4, S5, S6
+TOTAL = S1+S2+S3+S4+S5+S6
+PROMEDIO = TOTAL / 6
+Escribir ID, TOTAL, PROMEDIO
+Fin
+``` 
+![alt text](Diagrama_Ejercicio2.drawio-1.png)
