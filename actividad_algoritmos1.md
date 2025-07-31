@@ -43,5 +43,5 @@ Los diagramas de flujo utilizan una variedad de símbolos para representar proce
 
 Fuente: [Lucidchart - Simbología de diagramas de flujo](https://www.lucidchart.com/pages/es/simbolos-comunes-de-los-diagramas-de-flujo)
 
-![alt text](<flujo 1.png>) ![alt text](<flujo 2.png>)
+![alt text](<flujo_1.png>) ![alt text](<flujo_2.png>)
 
