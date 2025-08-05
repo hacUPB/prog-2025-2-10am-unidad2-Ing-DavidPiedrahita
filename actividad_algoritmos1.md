@@ -82,7 +82,7 @@ Leer Lapices
 si Lapices<1000:
   valorunidad=90
   Cobro=valorunidad*Lapices
- si no:
+  si no:
   valorunidad=85
   Cobro=valorunidad*Lapices
 Fin Si
@@ -102,15 +102,53 @@ Fin
 |descuento|salida|el descuento que se hace dependiendo del total de la compra|
 |15% / 8% / $250000 |constantes|descuentos que se pueden aplicar, valor de referencia|
 
+### Pseudocódigo
+
 ```
 Inicio
 Leer totalcompra
 Si totalcompra<250000:
   descuento=totalcompra*0.15
- si no:
+  si no:
   descuento=totalcompra*0.08
 Fin Si 
 preciofinal=totalcompra-descuento
 Escribir "Valor a pagar: ", preciofinal, ". se hizo un descuento de ", descuento 
+Fin
+```
+5. El director de una escuela está organizando un viaje de estudios, y requiere determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de viajes por el servicio. La forma de cobrar es la siguiente: si son 100 alumnos o más, el costo por cada alumno es de $65.00; de 50 a 99 alumnos, el costo es de $70.00, de 30 a 49, de $95.00, y si son menos de 30, el costo de la renta del autobús es de $4000.00, sin importar el número de alumnos.
+
+### Análisis
+
+|Variables|Tipo|Comentario|
+|---------|----|----------|
+|x|entrada|cantidad de alumnos|
+|costoalumno|salida|valor a cobrar por alumnos|
+|costototal|salida|costo de los alumnos mas autobus|
+|(x>=100) / (50<=x<100) / (30<=x<50) / (x<300) |constantes|rangos de alumnos|
+|$65 / $70 / $95 / $4000|constantes|precios por cantidad de alumnos|
+
+### Pseudocódigo
+
+```
+Inicio
+Leer x
+Si x>=100:
+  costoalumno=65
+  costotoal=costoalumno*x
+  si no:
+  Si x>=50:
+    costoalumno=70
+    costotoal=costoalumno*x
+    si no:
+      Si x>=30:
+        costoalumno=95
+        costotoal=costoalumno*x
+        si no:
+        costotoal=4000 
+      Fin si
+  Finsi
+Finsi
+Imprimir costoalumno, costototal
 Fin
 ```
