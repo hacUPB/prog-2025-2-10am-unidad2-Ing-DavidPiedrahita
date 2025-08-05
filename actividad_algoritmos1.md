@@ -148,8 +148,8 @@ Si x>=100:
       costotoal=4000 
       costoalumno=costotal/x
     Fin si
-  Finsi
-Finsi
+  Fin si
+Fin si
 Imprimir costoalumno, costototal
 Fin
 ```
