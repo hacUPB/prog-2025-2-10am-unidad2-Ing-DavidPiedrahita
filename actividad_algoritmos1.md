@@ -146,6 +146,7 @@ Si x>=100:
       costotoal=costoalumno*x
       si no:
       costotoal=4000 
+      costoalumno=costotal/x
     Fin si
   Finsi
 Finsi
