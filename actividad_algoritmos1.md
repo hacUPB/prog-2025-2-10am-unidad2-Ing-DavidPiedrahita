@@ -51,7 +51,7 @@ Fuente: [Lucidchart - Simbología de diagramas de flujo](https://www.lucidchart.
 
 - Construye un algoritmo que, al recibir como datos **el ID** del empleado y los seis primeros sueldos del año, calcule el ingreso total semestral y el promedio mensual, e imprima el ID del empleado, el ingreso total y el promedio mensual.
 
-## Solución:
+### Solución:
 
 ```
 Inicio 
@@ -72,9 +72,9 @@ Fin
 |Lapices|Entrada|
 |Precio|Salida|
 |valorunidad|salida|
-|85 / 90|Constantes|
+|85 / 90 / 1000|Constantes|
 
-## Pseudocódigo
+### Pseudocódigo
 
 ```
 Inicio
@@ -86,6 +86,31 @@ si Lapices<1000:
   valorunidad=85
   Cobro=valorunidad*Lapices
 Fin Si
-Imprimir "Usted debe pagar: ", Cobro, "(Valor por unidad: ", valorunidad, ")"   
+Imprimir "Usted debe pagar: ", Cobro, "(Valor por unidad: ", valorunidad, ")"
+Fin   
 ```
 ![alt text](Lapices.png) 
+
+4. Un almacén de ropa tiene una promoción: por compras superiores a $250 000 se les aplicará un descuento de 15%, de caso contrario, sólo se aplicará un 8% de descuento. Realice un algoritmo para determinar el precio final que debe pagar una persona por comprar en dicho almacén y de cuánto es el descuento que obtendrá. Represéntelo mediante el pseudocódigo y el diagrama de flujo.
+
+### Análisis
+
+|Variables|Tipo|Comentario|
+|---------|----|----------|
+|totalcompra|entrada|Valor bruto de la compra|
+|preciofinal|salida|precio a pagar con el descuento aplicado|
+|descuento|salida|el descuento que se hace dependiendo del total de la compra|
+|15% / 8% / $250000 |constantes|descuentos que se pueden aplicar, valor de referencia|
+
+```
+Inicio
+Leer totalcompra
+Si totalcompra<250000:
+  descuento=totalcompra*0.15
+ si no:
+  descuento=totalcompra*0.08
+Fin Si 
+preciofinal=totalcompra-descuento
+Escribir "Valor a pagar: ", preciofinal, ". se hizo un descuento de ", descuento 
+Fin
+```
