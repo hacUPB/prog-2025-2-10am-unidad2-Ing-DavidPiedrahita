@@ -141,12 +141,12 @@ Si x>=100:
     costoalumno=70
     costotoal=costoalumno*x
     si no:
-      Si x>=30:
-        costoalumno=95
-        costotoal=costoalumno*x
-        si no:
-        costotoal=4000 
-      Fin si
+    Si x>=30:
+      costoalumno=95
+      costotoal=costoalumno*x
+      si no:
+      costotoal=4000 
+    Fin si
   Finsi
 Finsi
 Imprimir costoalumno, costototal
