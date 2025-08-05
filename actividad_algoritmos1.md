@@ -45,9 +45,9 @@ Fuente: [Lucidchart - Simbología de diagramas de flujo](https://www.lucidchart.
 
 ![alt text](<flujo_1.png>) ![alt text](<flujo_2.png>)
 
-# _Ejercicio_
+# _Ejercicios_
 
-Analicemos el siguiente problema y representemos su solución mediante un algoritmo secuencial.
+1. Analicemos el siguiente problema y representemos su solución mediante un algoritmo secuencial.
 
 - Construye un algoritmo que, al recibir como datos **el ID** del empleado y los seis primeros sueldos del año, calcule el ingreso total semestral y el promedio mensual, e imprima el ID del empleado, el ingreso total y el promedio mensual.
 
@@ -62,3 +62,30 @@ Escribir ID, TOTAL, PROMEDIO
 Fin
 ``` 
 ![alt text](Diagrama_Ejercicio2.drawio-1.png)
+
+2. 
+
+3. Realice un algoritmo para determinar cuánto se debe pagar por equis cantidad de lápices considerando que si son 1000 o más el costo es de $85 cada uno; de lo contrario, el precio es de $90. Represéntelo con el pseudocódigo y el diagrama de flujo.
+
+|Variables|Tipo|
+|---------|----|
+|Lapices|Entrada|
+|Precio|Salida|
+|valorunidad|salida|
+|85 / 90|Constantes|
+
+## Pseudocódigo
+
+```
+Inicio
+Leer Lapices
+si Lapices<1000:
+  valorunidad=90
+  Cobro=valorunidad*Lapices
+ si no:
+  valorunidad=85
+  Cobro=valorunidad*Lapices
+Fin Si
+Imprimir "Usted debe pagar: ", Cobro, "(Valor por unidad: ", valorunidad, ")"   
+```
+![alt text](Lapices.png) 
