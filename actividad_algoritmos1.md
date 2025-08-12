@@ -244,11 +244,15 @@ Fin
 ```
 Inicio
 Leer N
-factorial = 1
-Mientras N > 1
-  factorial = factorial * N
-  N = N - 1
-FinMientras
+Si N < 0:
+  escribir "no hay factoriales para números negativos"
+  si no:
+    factorial = 1
+    Mientras N > 1
+      factorial = factorial * N
+      N = N - 1
+    FinMientras
+FinSi    
 Escribir factorial
 Fin
 ```
