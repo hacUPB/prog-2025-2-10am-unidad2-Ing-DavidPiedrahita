@@ -47,11 +47,11 @@ Fuente: [Lucidchart - Simbología de diagramas de flujo](https://www.lucidchart.
 
 # _Ejercicios_
 
-1. Analicemos el siguiente problema y representemos su solución mediante un algoritmo secuencial.
+### 1. Analicemos el siguiente problema y representemos su solución mediante un algoritmo secuencial.
 
 - Construye un algoritmo que, al recibir como datos **el ID** del empleado y los seis primeros sueldos del año, calcule el ingreso total semestral y el promedio mensual, e imprima el ID del empleado, el ingreso total y el promedio mensual.
 
-### Solución:
+#### Pseudocódigo:
 
 ```
 Inicio 
@@ -63,9 +63,11 @@ Fin
 ``` 
 ![alt text](Diagrama_Ejercicio2.drawio-1.png)
 
-2. 
+### 2. 
 
-3. Realice un algoritmo para determinar cuánto se debe pagar por equis cantidad de lápices considerando que si son 1000 o más el costo es de $85 cada uno; de lo contrario, el precio es de $90. Represéntelo con el pseudocódigo y el diagrama de flujo.
+## Condiciones
+
+### 3. Realice un algoritmo para determinar cuánto se debe pagar por equis cantidad de lápices considerando que si son 1000 o más el costo es de $85 cada uno; de lo contrario, el precio es de $90. Represéntelo con el pseudocódigo y el diagrama de flujo.
 
 |Variables|Tipo|
 |---------|----|
@@ -74,7 +76,7 @@ Fin
 |valorunidad|salida|
 |85 / 90 / 1000|Constantes|
 
-### Pseudocódigo
+#### Pseudocódigo
 
 ```
 Inicio
@@ -91,9 +93,9 @@ Fin
 ```
 ![alt text](Lapices.png) 
 
-4. Un almacén de ropa tiene una promoción: por compras superiores a $250 000 se les aplicará un descuento de 15%, de caso contrario, sólo se aplicará un 8% de descuento. Realice un algoritmo para determinar el precio final que debe pagar una persona por comprar en dicho almacén y de cuánto es el descuento que obtendrá. Represéntelo mediante el pseudocódigo y el diagrama de flujo.
+### 4. Un almacén de ropa tiene una promoción: por compras superiores a $250 000 se les aplicará un descuento de 15%, de caso contrario, sólo se aplicará un 8% de descuento. Realice un algoritmo para determinar el precio final que debe pagar una persona por comprar en dicho almacén y de cuánto es el descuento que obtendrá. Represéntelo mediante el pseudocódigo y el diagrama de flujo.
 
-### Análisis
+#### Análisis
 
 |Variables|Tipo|Comentario|
 |---------|----|----------|
@@ -102,7 +104,7 @@ Fin
 |descuento|salida|el descuento que se hace dependiendo del total de la compra|
 |15% / 8% / $250000 |constantes|descuentos que se pueden aplicar, valor de referencia|
 
-### Pseudocódigo
+#### Pseudocódigo
 
 ```
 Inicio
@@ -116,9 +118,9 @@ preciofinal=totalcompra-descuento
 Escribir "Valor a pagar: ", preciofinal, ". se hizo un descuento de ", descuento 
 Fin
 ```
-5. El director de una escuela está organizando un viaje de estudios, y requiere determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de viajes por el servicio. La forma de cobrar es la siguiente: si son 100 alumnos o más, el costo por cada alumno es de $65.00; de 50 a 99 alumnos, el costo es de $70.00, de 30 a 49, de $95.00, y si son menos de 30, el costo de la renta del autobús es de $4000.00, sin importar el número de alumnos.
+### 5. El director de una escuela está organizando un viaje de estudios, y requiere determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de viajes por el servicio. La forma de cobrar es la siguiente: si son 100 alumnos o más, el costo por cada alumno es de $65.00; de 50 a 99 alumnos, el costo es de $70.00, de 30 a 49, de $95.00, y si son menos de 30, el costo de la renta del autobús es de $4000.00, sin importar el número de alumnos.
 
-### Análisis
+#### Análisis
 
 |Variables|Tipo|Comentario|
 |---------|----|----------|
@@ -128,7 +130,7 @@ Fin
 |(x>=100) / (50<=x<100) / (30<=x<50) / (x<300) |constantes|rangos de alumnos|
 |$65 / $70 / $95 / $4000|constantes|precios por cantidad de alumnos|
 
-### Pseudocódigo
+#### Pseudocódigo
 
 ```
 Inicio
@@ -151,5 +153,102 @@ Si x>=100:
   Fin si
 Fin si
 Imprimir costoalumno, costototal
+Fin
+```
+
+## _Tarea_
+
+Crear un pseudocódigo y un diagrama de flujo para el siguiente proceso:
+Ingresar día, mes y año de nacimiento (son variables de entrada). Ingresar día, mes y año actual, es decir, la fecha actual (son variables de entrada). 
+Calcular edad (variable de salida).
+
+### Pseudocódigo.
+
+```
+Inicio
+Leer DíaN, MesN, AñoN, DíaA, MesA, AñoA
+Edad = AñoA - AñoN
+Si MesA < MesN:
+  Edad = Edad -1
+  Si no
+  Si (MesA = MesN) ∧ (DiaA < DiaN):
+    Edad = Edad -1 
+  Fin Si
+Fin Si
+Escribir "Tu edad es de: ", Edad, " años"
+Fin
+```
+## Bucles o ciclos
+
+### 1. Se requiere un algoritmo para obtener la suma de diez cantidades, que se leen del teclado, mediante la utilización de un ciclo while. Realice el diagrama de flujo y el pseudocódigo.
+
+#### Pseudocódigo
+
+```
+Inicio
+suma = 0
+i = 0
+Mientras i<10
+  Leer cantidad
+  suma = suma + cantidad
+  i = i + 1
+FinMientras
+Escribir suma
+Fin  
+```
+
+### 2. Se requiere un algoritmo para obtener la suma de diez cantidades mediante la utilización de un ciclo for. Realice el diagrama de flujo y el pseudocódigo.
+
+#### Pseudocódigo
+
+```
+Inicio
+Suma = 0
+Para i = 1 hasta i = 10
+  Leer cantidad
+  suma = suma + cantidad
+FinPara
+Escribir suma
+Fin  
+```
+
+### 3. Se requiere un algoritmo para determinar, de N cantidades, cuántas son cero, cuántas son menores a cero, y cuántas son mayores a cero.
+
+```
+Inicio
+menores = 0
+ceros = 0
+mayores = 0
+Leer N
+Para i = 0 hasta i = N
+  Leer cant
+  Si cant < 0 :
+    menores = menores + 1
+    si no:
+    Si cant = 0 :
+      ceros = ceros + 1
+      si no:
+      mayores = mayores + 1
+    FinSi
+  FiSi
+  i = i + 1
+FinPara 
+Imprimir menores,  ceros, mayores
+Fin
+```
+
+### 4. Calcular el Factorial de un número entero ingresado por el usuario.
+
+#### Pseudocódigo
+
+```
+Inicio
+Leer N
+factorial = 1
+Mientras N > 1
+  factorial = factorial * N
+  N = N - 1
+FinMientras
+Escribir factorial
 Fin
 ```
