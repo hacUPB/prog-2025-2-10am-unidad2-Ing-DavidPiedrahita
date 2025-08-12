@@ -256,3 +256,47 @@ FinSi
 Escribir factorial
 Fin
 ```
+
+## _Tarea_
+
+Se requiere un algoritmo para obtener la estatura promedio de un grupo de personas, cuyo número de miembros se desconoce, el ciclo debe efectuarse siempre y cuando se tenga una estatura registrada. Realice el diagrama de flujo, el pseudocódigo para representarlo, utilizando el ciclo apropiado.
+
+#### Pseudocódigo
+
+Opción 1: para arrojar el promedio cuando el usuario lo solicite
+
+```
+Inicio
+Escribir "Para acabar el conteo y obtener el promedio, presionar la tecla F."
+estaturaTot = 0
+npersonas = 0
+finconteo = 0
+Mientras finconteo ≠ F 
+  Leer estatura
+  Si estatura ≠ F:
+    estaturaTot = estaturaTot + estatura
+    npersonas = npersonas + 1
+  FinSi
+  finconteo = estatura
+FinMientras
+estaturaProm = estaturaTot / npersonas
+Escribir estaturaProm
+Fin
+
+```
+
+Opción 2: arroja el promedio mediante el usuario va metiendo datos, pero no tiene fin
+
+```
+Inicio
+estaturaTot = 0
+npersonas = 0
+Mientras estaturaTot >= 0
+  leer estatura
+  estaturaTot = estaturaTot + estatura
+  npersonas = npersonas + 1
+  estaturaProm = estaturaTot / npersonas
+  Escribir estaturaprom
+FinMientras
+Fin  
+```
