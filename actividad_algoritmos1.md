@@ -324,3 +324,22 @@ valorCuota = totalpagar / ncuotas
 Escribir totalpagar, valorCuota
 Fin
 ```
+
+```
+Inicio
+tasa = 0.02
+Leer valorcompra, ncuotas
+valorcuota = valorcompra / ncuotas
+totalpagar = 0
+cuota = 0
+deuda = valorcompra
+mientras cuota < ncuotas
+  valorpagar = valorcuota + (deuda * 0.02)
+  escribir valorpagar
+  totalpagar = totalpagar + valorpagar
+  deuda = deuda - valorcuota
+  cuota = cuota + 1
+FinMientras
+imprimir totalpagar  
+Fin
+```
