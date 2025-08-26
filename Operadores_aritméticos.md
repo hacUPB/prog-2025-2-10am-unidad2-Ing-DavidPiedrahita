@@ -14,7 +14,7 @@
 
 | Operador Relacional | Símbolo | Descripción                          | Ejemplo             |
 |---------------------|---------|--------------------------------------|---------------------|
-| Igualdad            | `=`     | Verifica si dos valores son iguales  | `a = b`             |
+| Igualdad            | `==`     | Verifica si dos valores son iguales  | `a == b`             |
 | Desigualdad         | `≠` o `!=` | Verifica si dos valores son distintos | `a ≠ b` o `a != b` |
 | Mayor que           | `>`     | Verifica si el valor izquierdo es mayor que el derecho | `a > b` |
 | Menor que           | `<`     | Verifica si el valor izquierdo es menor que el derecho | `a < b` |
