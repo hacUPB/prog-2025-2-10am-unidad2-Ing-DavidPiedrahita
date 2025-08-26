@@ -6,16 +6,16 @@ peso = float (peso)
 altura = input ("ingrese su altura (m): ")
 altura = float (altura)
 IMC = peso / (altura**2)
-print (nombre, "tu IMC es: ", IMC)
+print (f"tu IMC es:  {IMC:0.2f}")
 if IMC >= 40:
-    print ("tienes obesidad extrema (tipo III)")
+    print (f"Paciente {nombre}, tienes obesidad extrema (tipo III)")
 elif IMC >= 35:
-        print ("tienes obesidad extrema (tipo II)")
-    elif IMC >= 30:
-            print ("tienes obesidad extrema (tipo I)")
-        elif IMC >= 25:
-                print ("tienes sobrepeso")
-            elif IMC >= 18.5:
-                    print ("estás en un peso adecuado")
-                else:
-                    print ("tienes bajo peso")
+    print (f"Paciente {nombre}, tienes obesidad alta (tipo II)")
+elif IMC >= 30:
+    print (f"Paciente {nombre}, tienes obesidad (tipo I)")
+elif IMC >= 25:
+    print (f"Paciente {nombre}, tienes sobrepeso")
+elif IMC >= 18.5:
+    print (f"Paciente {nombre}, estás en un peso adecuado")
+else:
+    print (f"Paciente {nombre}, tienes bajo peso")

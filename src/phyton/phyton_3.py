@@ -11,10 +11,10 @@ if IMC >= 40:
     print ("tienes obesidad extrema (tipo III)")
 else:
     if IMC >= 35:
-        print ("tienes obesidad extrema (tipo II)")
+        print ("tienes obesidad alta (tipo II)")
     else:
         if IMC >= 30:
-            print ("tienes obesidad extrema (tipo I)")
+            print ("tienes obesidad (tipo I)")
         else:
             if IMC >= 25:
                 print ("tienes sobrepeso")
