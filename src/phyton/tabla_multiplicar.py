@@ -4,6 +4,7 @@ contador = 0
 while contador <= multiplos:
     print (f"{numero} x {contador} = {numero*contador}")
     contador += 1
+    
 
 """
 numero = float(input("Ingrese el número del que desea saber su tabla de multiplicar: "))
