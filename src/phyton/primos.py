@@ -1,3 +1,4 @@
+# verificar si un numero es primo
 """
 numero = int(input("Ingrese un número entero positivo: "))
 div = 0
@@ -13,7 +14,7 @@ else:
         if numero % n == 0:
             print (n)
 """
-
+# imprimir cierta cantidad de numeros primos
 rango = int(input("ingrese la cantidad de números primos que desea: "))
 i = 0
 n = 1
