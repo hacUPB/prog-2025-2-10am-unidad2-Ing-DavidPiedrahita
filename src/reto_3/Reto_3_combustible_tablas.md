@@ -54,3 +54,74 @@ Estos elementos permiten estimar con precisión el combustible requerido, optimi
 - "Peso de carga para el vuelo número X:"
 - "Número de escalas para el vuelo número X:"
 - "Precio por litro de combustible:"
+
+### Pseudocódigo
+
+```
+Función calcular_combustible_base(distancia, consumo_por_km):
+    combustible_base = distancia * consumo_por_km
+    Retornar combustible_base
+
+Función calcular_combustible_escalas(escalas, combustible_por_escala):
+    Si escalas > 0 Entonces:
+        combustible_escalas = escalas * combustible_por_escala
+    Sino:
+        combustible_escalas = 0
+    Retornar combustible_escalas
+
+Función ajuste_por_peso(peso_carga, limite_peso, combustible_extra_por_peso, distancia):
+    Si peso_carga > limite_peso Entonces:
+        combustible_peso = combustible_extra_por_peso * distancia
+    Sino:
+        combustible_peso = 0
+    Retornar combustible_peso
+
+Función reserva_seguridad(combustible_base):
+    reserva_seguridad_fija = combustible_base * 0.3
+    Retornar reserva_seguridad_fija
+
+Función combustible_total_vuelo(combustible_base, combustible_escalas, combustible_peso, reserva_seguridad_fija):
+    total_vuelo = combustible_base + combustible_escalas + combustible_peso + reserva_seguridad_fija
+    Retornar total_vuelo
+
+Función calcular_precio_total(total_vuelo, precio_por_litro):
+    precio_total = total_vuelo * precio_por_litro
+    Retornar precio_total
+
+Inicio
+    imprimir("Ingrese la cantidad de vuelos que realizará el día de hoy el avión:")
+    leer(vuelos)
+    imprimir("Ingrese la cantidad de litros de combustible que consume el avión por kilómetro:")
+    leer(consumo_por_km)
+    imprimir("Ingrese la cantidad de litros de combustible que consume el avión por escala:")
+    leer(combustible_por_escala)
+    imprimir("Ingrese la cantidad de litros de combustible que consume el avión por superar el límite de peso, por kilometro:")
+    leer(combustible_extra_por_peso)
+    imprimir("Ingrese el peso máximo que puede cargar el avión:")
+    leer(limite_peso)
+    imprimir("Ingrese el coste del combustible por litro (Dólares):")
+    leer(precio_por_litro)
+    total_dia = 0
+    precio_total_dia = 0
+    para i = 1 hasta vuelos hacer:
+        imprimir("Vuelo número " + i)
+        imprimir("Ingrese la distancia del vuelo (Km):")
+        leer(distancia)
+        imprimir("Ingrese las escalas del vuelo:")
+        leer(escalas)
+        imprimir("Ingrese el peso de la carga del avión:")
+        leer(peso_carga)
+        combustible_base = calcular_combustible_base(distancia, consumo_por_km)
+        combustible_escalas = calcular_combustible_escalas(escalas, combustible_por_escala)
+        combustible_peso = ajuste_por_peso(peso_carga, limite_peso, combustible_extra_por_peso, distancia)
+        reserva_seguridad_fija = reserva_seguridad(combustible_base)
+        total_vuelo = combustible_total_vuelo(combustible_base, combustible_escalas, combustible_peso, reserva_seguridad_fija)
+        precio_total = calcular_precio_total(total_vuelo, precio_por_litro)
+        imprimir("El combustible necesario para el vuelo es: " + total_vuelo + "L")
+        imprimir("El costo para este vuelo es: $" + precio_total)
+        total_dia = total_dia + total_vuelo
+        precio_total_dia = precio_total_dia + precio_total
+    imprimir("El combustible que esta aeronave gastará en el día es: " + total_dia + "L")
+    imprimir("El costo de combustible para todas las operaciones es: $" + precio_total_dia)
+Fin
+```    

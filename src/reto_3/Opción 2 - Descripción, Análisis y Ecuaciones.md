@@ -69,3 +69,49 @@ _CG = ( A - ( [N] x [B] / W )) + D_
 + B: Distancia entre el tren de nariz y el tren principal.
 + W: Peso total de la aeronave.
 + D: Distancia entre el dátum y el centro del punto de gateo.
+
+### Pseudocódigo
+
+```
+Función CALC_CG(MT, PMT):
+    CG = MT / PMT
+    devolver CG
+
+Inicio
+    imprimir("Ingrese el modelo de la aeronave:")
+    leer MDL
+    imprimir("Ingrese la matrícula de la aeronave:")
+    leer MTCL
+    imprimir("Ingrese el número de serie de la aeronave:")
+    leer NSRE
+    imprimir("Ingrese la distancia desde el DATUM hasta el punto de apoyo del tren de nariz:")
+    leer BDMN
+    imprimir("Ingrese la distancia desde el DATUM hasta el punto de apoyo del tren principal:")
+    leer BDMP 
+    imprimir("Ingrese el Rango Permitido del Centro de Gravedad (en distancia desde el datum):")
+    leer RPCG
+    RPCGmin = RPCG - 1
+    RPCGmax = RPCG + 1
+    CG_valido = falso
+    mientras CG_valido = falso:
+        imprimir("Ingrese el peso registrado en el Tren de nariz:")
+        leer PMTN
+        imprimir("Ingrese el peso registrado en el Tren principal (izquierda):")
+        leer PMTPI
+        imprimir("Ingrese el peso registrado en el Tren principal (derecha):")
+        leer PMTPD
+        PMTP = PMTPI + PMTPD
+        PMT = PMTP + PMTN
+        MPN = PMTN * BDMN
+        MPP = PMTP * BDMP
+        MT = MPN + MPP
+        CG = CALC_CG(MT, PMT)
+        si CG > RPCGmin y CG < RPCGmax entonces:
+            CG_valido = verdadero
+        sino si CG < RPCGmin entonces:
+            imprimir("Añada más peso atrás o reduzca adelante e introduzca los nuevos datos")
+        sino si CG > RPCGmax entonces:
+            imprimir("Añada más peso adelante o reduzca atrás e introduzca los nuevos datos")
+    imprimir("El avión ", MDL, " con matrícula ", MTCL, " y número de serie ", NSRE, ", cuenta con un CG a ", CG, " metros del Datum, dato válido para permitir su salida.")
+Fin
+```
